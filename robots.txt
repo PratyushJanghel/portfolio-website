@@ -1,0 +1,10 @@
+# robots.txt for Pratyush Janghel
+# https://pratyushjanghel.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pratyushjanghel.com/sitemap.xml
+
+
