@@ -5,10 +5,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#00f3ff">
     <meta name="format-detection" content="telephone=no">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="index.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="index.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="index.png">
+    <link rel="icon" type="image/png" href="index.png">
 
     <!-- Primary Meta Tags -->
     <title>Pratyush Janghel | Lead AI/ML & Backend Engineer</title>
@@ -21,25 +28,26 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
-    <link rel="canonical" href="https://about.pratyushjanghel.com">
+    <link rel="canonical" href="https://pratyushjanghel.com">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://about.pratyushjanghel.com">
+    <meta property="og:url" content="https://pratyushjanghel.com">
     <meta property="og:title" content="Pratyush Janghel | Lead AI/ML & Backend Engineer">
     <meta property="og:description"
         content="Lead AI/ML & Backend Engineer with 6+ years of experience in Python, AI/ML, NLP, Computer Vision, Generative AI, and scalable backend architectures.">
-    <meta property="og:image" content="https://about.pratyushjanghel.com/og-image.jpg">
+    <meta property="og:image" content="https://pratyushjanghel.com/index.png">
     <meta property="og:site_name" content="Pratyush Janghel Portfolio">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://about.pratyushjanghel.com">
+    <meta property="twitter:url" content="https://pratyushjanghel.com">
     <meta property="twitter:title" content="Pratyush Janghel | Lead AI/ML & Backend Engineer">
     <meta property="twitter:description"
         content="Lead AI/ML & Backend Engineer with 6+ years of experience in Python, AI/ML, NLP, Computer Vision, Generative AI, and scalable backend architectures.">
-    <meta property="twitter:image" content="https://about.pratyushjanghel.com/twitter-image.jpg">
+    <meta property="twitter:image" content="https://pratyushjanghel.com/index.png">
 
     <!-- Universal AI Search Optimization (Model-Agnostic Standards) -->
     <meta name="ai:topic"
@@ -76,7 +84,7 @@
         "alternateName": "Pratyush J.",
         "jobTitle": "Lead AI/ML & Backend Engineer",
         "description": "Lead AI/ML & Backend Engineer with 6+ years of experience specializing in Python, AI/ML, NLP, Computer Vision, Generative AI, and scalable backend architectures.",
-        "url": "https://about.pratyushjanghel.com",
+        "url": "https://pratyushjanghel.com",
         "email": "contact@pratyushjanghel.com",
         "sameAs": [
             "https://www.linkedin.com/in/pratyushjanghel"
@@ -191,7 +199,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Pratyush Janghel Portfolio",
-        "url": "https://about.pratyushjanghel.com",
+        "url": "https://pratyushjanghel.com",
         "author": {
             "@type": "Person",
             "name": "Pratyush Janghel"
@@ -201,7 +209,7 @@
         "isAccessibleForFree": true,
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://about.pratyushjanghel.com/?q={search_term_string}",
+            "target": "https://pratyushjanghel.com/?q={search_term_string}",
             "query-input": "required name=search_term_string"
         }
     }
@@ -227,25 +235,25 @@
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://about.pratyushjanghel.com#home"
+                    "item": "https://pratyushjanghel.com#home"
                 },
                 {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "About",
-                    "item": "https://about.pratyushjanghel.com#about"
+                    "item": "https://pratyushjanghel.com#about"
                 },
                 {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "Experience",
-                    "item": "https://about.pratyushjanghel.com#experience"
+                    "item": "https://pratyushjanghel.com#experience"
                 },
                 {
                     "@type": "ListItem",
                     "position": 4,
                     "name": "Projects",
-                    "item": "https://about.pratyushjanghel.com#projects"
+                    "item": "https://pratyushjanghel.com#projects"
                 }
             ]
         }
@@ -372,83 +380,6 @@
             overflow: hidden;
         }
 
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .particle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: var(--neon-cyan);
-            border-radius: 50%;
-            will-change: transform, opacity;
-            transform: translateZ(0);
-            animation: float 20s infinite;
-            box-shadow: 0 0 8px var(--neon-cyan);
-            font-family: 'Courier New', monospace;
-            font-size: 10px;
-            color: var(--neon-cyan);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-
-            10% {
-                opacity: 1;
-            }
-
-            90% {
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-100vh) translateX(100px);
-                opacity: 0;
-            }
-        }
-
-        .grid-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                linear-gradient(rgba(0, 243, 255, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 243, 255, 0.04) 1px, transparent 1px);
-            background-size: 40px 40px;
-            animation: gridMove 25s linear infinite;
-            opacity: 0.6;
-        }
-
-        @keyframes gridMove {
-            0% {
-                transform: translate(0, 0);
-            }
-
-            100% {
-                transform: translate(50px, 50px);
-            }
-        }
-
-        /* Neural Network Animation */
-        .neural-network {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0.3;
-        }
 
         /* Consolidated pulse animation - used by multiple elements */
         @keyframes pulse {
@@ -488,6 +419,7 @@
             top: 0;
             width: 100%;
             background: rgba(10, 10, 15, 0.8);
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             padding: 1rem 0;
             z-index: 1000;
@@ -1025,6 +957,7 @@
         /* About Section */
         .about {
             background: rgba(10, 10, 15, 0.5);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
 
@@ -1452,6 +1385,7 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             z-index: 10;
         }
@@ -1660,6 +1594,12 @@
             margin: 0 auto;
         }
 
+        .contact-intro {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+
         .contact-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1802,22 +1742,33 @@
             color: var(--neon-cyan);
             font-size: 1.5rem;
             cursor: pointer;
-            display: flex;
+            display: flex !important;
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
-            z-index: 1000;
+            z-index: 10000;
             opacity: 0;
             visibility: hidden;
             transform: translateY(20px);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+            pointer-events: none;
+        }
+
+        /* Hide scroll-to-top button during loading */
+        body.loading .scroll-to-top {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
         }
 
         .scroll-to-top.visible {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
+            pointer-events: auto;
         }
 
         .scroll-to-top:hover {
@@ -1915,79 +1866,6 @@
             }
         }
 
-        /* Matrix Rain Effect */
-        .matrix-rain {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.15;
-        }
-
-        /* Backend Architecture Visualization */
-        .backend-architecture {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.25;
-        }
-
-        /* AI Symbols Floating */
-        .ai-symbols {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .ai-symbol {
-            position: absolute;
-            color: rgba(0, 243, 255, 0.3);
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            font-weight: bold;
-            animation: floatSymbol 20s infinite linear;
-            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
-            will-change: transform, opacity;
-            transform: translateZ(0);
-        }
-
-        @keyframes floatSymbol {
-            0% {
-                transform: translateY(-100px) translateX(0);
-                opacity: 0;
-            }
-
-            10% {
-                opacity: 1;
-            }
-
-            90% {
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(100vh) translateX(50px);
-                opacity: 0;
-            }
-        }
-
-        /* ============================================
-           RESPONSIVE DESIGN - ALL DEVICES
-           ============================================ */
-
-        /* Large Desktops (1201px and above) */
         @media (min-width: 1201px) {
             .hero-content {
                 max-width: 1000px;
@@ -2126,6 +2004,7 @@
                 left: 0;
                 right: 0;
                 background: rgba(10, 10, 15, 0.95);
+                -webkit-backdrop-filter: blur(20px);
                 backdrop-filter: blur(20px);
                 flex-direction: column;
                 width: 100%;
@@ -2241,11 +2120,6 @@
             }
 
             /* Disable heavy animations on tablets for better performance */
-            .neural-network,
-            .matrix-rain,
-            .backend-architecture {
-                opacity: 0.5;
-            }
         }
 
         /* Mobile Phones (320px - 480px) */
@@ -2478,16 +2352,6 @@
             }
 
             /* Disable heavy canvas animations on mobile for performance */
-            .neural-network,
-            .matrix-rain,
-            .backend-architecture {
-                display: none;
-            }
-
-            /* Reduce particle count on mobile */
-            .particle {
-                font-size: 8px;
-            }
         }
 
         /* Extra Small Phones (max-width: 360px) */
@@ -2566,11 +2430,6 @@
         @media print {
 
             .ai-background,
-            .neural-network,
-            .matrix-rain,
-            .backend-architecture,
-            .ai-symbols,
-            .particles,
             nav,
             .scroll-to-top,
             .scroll-progress,
@@ -2588,18 +2447,6 @@
             }
         }
 
-        /* Performance Optimizations for Low-End Devices */
-        .low-end-device canvas {
-            image-rendering: optimizeSpeed;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: pixelated;
-        }
-
-        .low-end-device .particle,
-        .low-end-device .ai-symbol {
-            animation-duration: 25s !important;
-        }
-
         .low-end-device .skill-card,
         .low-end-device .project-card,
         .low-end-device .contact-item {
@@ -2614,32 +2461,39 @@
             transition-duration: 0.01ms !important;
         }
 
-        /* Scrollbar Styling - Cross Browser Support */
-        /* For Webkit browsers (Chrome, Safari, Edge) */
-        ::-webkit-scrollbar {
-            width: 12px;
+        /* Hide scrollbar during loading */
+        body.loading {
+            overflow: hidden !important;
+            scrollbar-width: none !important;
         }
 
+        body.loading ::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+        }
+
+        /* Scrollbar Styling - Cross Browser Support */
+        /* For Webkit browsers (Chrome, Safari, Edge) - width uses browser default (auto) */
         ::-webkit-scrollbar-track {
             background: var(--darker-bg);
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--neon-cyan) 0%, rgba(0, 243, 255, 0.8) 100%);
+            background: linear-gradient(180deg, var(--neon-cyan) 0%, rgba(0, 243, 255, 1) 50%, var(--neon-cyan) 100%);
             border-radius: 10px;
             border: 2px solid var(--darker-bg);
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.6), inset 0 0 10px rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.9), 0 0 30px rgba(0, 243, 255, 0.6), inset 0 0 15px rgba(0, 243, 255, 0.5);
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, var(--neon-purple) 0%, rgba(176, 38, 255, 0.8) 100%);
-            box-shadow: 0 0 20px rgba(176, 38, 255, 0.8), inset 0 0 10px rgba(176, 38, 255, 0.4);
+            background: linear-gradient(180deg, var(--neon-purple) 0%, rgba(176, 38, 255, 1) 50%, var(--neon-purple) 100%);
+            box-shadow: 0 0 25px rgba(176, 38, 255, 1), 0 0 40px rgba(176, 38, 255, 0.8), inset 0 0 20px rgba(176, 38, 255, 0.6);
         }
 
         /* For Firefox */
         * {
-            scrollbar-width: thin;
+            scrollbar-width: auto;
             scrollbar-color: var(--neon-cyan) var(--darker-bg);
         }
 
@@ -2652,12 +2506,6 @@
 <body>
     <!-- Animated Background -->
     <div class="ai-background">
-        <div class="grid-overlay"></div>
-        <div class="particles" id="particles"></div>
-        <canvas class="neural-network" id="neuralCanvas"></canvas>
-        <canvas class="matrix-rain" id="matrixCanvas"></canvas>
-        <canvas class="backend-architecture" id="backendCanvas"></canvas>
-        <div class="ai-symbols" id="aiSymbols"></div>
     </div>
 
     <!-- Loading Screen Overlay -->
@@ -2703,7 +2551,8 @@
                 <h1 id="hero-title" class="glitch" data-text="PRATYUSH J." itemprop="name"
                     aria-label="Pratyush Janghel">PRATYUSH J.</h1>
             </div>
-            <p class="typing-text" id="typingText" aria-live="polite" aria-atomic="true"></p>
+            <p class="typing-text" id="typingText" aria-live="polite" aria-atomic="true">Lead AI/ML & Backend Engineer
+            </p>
             <p class="description" itemprop="description">
                 A passionate Engineer with <span id="dynamicExperience" aria-label="years of experience">5+</span> years
                 of professional experience
@@ -3117,7 +2966,7 @@
     <section id="contact" class="contact" itemscope itemtype="https://schema.org/ContactPoint">
         <h2 class="section-title"><span class="glitch-text" data-text="Get In Touch">Get In Touch</span></h2>
         <div class="contact-content">
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">
+            <p class="contact-intro">
                 I'm always excited to connect with fellow innovators, explore new opportunities, and collaborate on
                 groundbreaking projects. Whether you're looking to discuss AI innovations, backend architecture, tech
                 leadership, or simply want to share ideas—let's start a conversation that could lead to something
@@ -3150,71 +2999,29 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
 
     <script>
-        // ============================================
-        // DYNAMIC LOADING SCREEN
-        // ============================================
-
-        // Animation tracking system
-        const animationTracker = {
-            neuralNetwork: false,
-            matrixRain: false,
-            backendArchitecture: false,
-            aiSymbols: false,
-            typeWriter: false,
-            particles: false,
-            allReady: function () {
-                return this.neuralNetwork &&
-                    this.matrixRain &&
-                    this.backendArchitecture &&
-                    this.aiSymbols &&
-                    this.typeWriter &&
-                    this.particles;
-            }
-        };
+        // Add loading class to body on page load
+        document.body.classList.add('loading');
 
         function initLoadingScreen() {
             const progressBar = document.getElementById('loadingProgressBar');
             if (!progressBar) return;
 
-            let currentProgress = 0;
-            let targetProgress = 0;
-            let backgroundLoaded = false;
-            let allResourcesLoaded = false;
-            let animationsReady = false;
-            let fontsLoaded = false;
-            let stylesheetsLoaded = false;
-            let scriptsLoaded = false;
-            let imagesLoaded = false;
-            let minimumWaitTime = false;
-            const startTime = Date.now();
-            // Adaptive minimum wait time based on device capabilities
-            const MIN_LOAD_TIME = deviceCapabilities.isLowEnd ? 600 : 800; // Reduced from 1500ms
+            let currentProgress = 0, targetProgress = 0, allResourcesLoaded = false, animationsReady = true;
+            let fontsLoaded = false, stylesheetsLoaded = false, scriptsLoaded = false, imagesLoaded = false, minimumWaitTime = false;
+            const startTime = Date.now(), MIN_LOAD_TIME = deviceCapabilities.isLowEnd ? 600 : 800;
 
-            // Update progress bar smoothly
             function updateProgressBar() {
                 if (currentProgress < targetProgress) {
                     const increment = Math.max(0.5, (targetProgress - currentProgress) * 0.1);
                     currentProgress = Math.min(currentProgress + increment, targetProgress);
                     progressBar.style.width = currentProgress + '%';
                     requestAnimationFrame(updateProgressBar);
+                } else if (currentProgress >= 100) {
+                    hideLoadingOverlay();
                 } else if (allResourcesLoaded && animationsReady && fontsLoaded && stylesheetsLoaded &&
-                    scriptsLoaded && imagesLoaded && minimumWaitTime && currentProgress >= 100) {
-                    // Double check everything is truly ready
-                    const canvases = document.querySelectorAll('canvas');
-                    let allCanvasesReady = true;
-                    canvases.forEach(canvas => {
-                        if (canvas.width === 0 || canvas.height === 0) {
-                            allCanvasesReady = false;
-                        }
-                    });
-
-                    if (allCanvasesReady) {
-                        // Everything loaded including animations, hide overlay
-                        hideLoadingOverlay();
-                    } else {
-                        // Wait a bit more for canvases
-                        requestAnimationFrame(updateProgressBar);
-                    }
+                    scriptsLoaded && imagesLoaded && minimumWaitTime) {
+                    targetProgress = 100;
+                    requestAnimationFrame(updateProgressBar);
                 } else {
                     requestAnimationFrame(updateProgressBar);
                 }
@@ -3228,31 +3035,19 @@
                 }
             }
 
-            // Check if all animations are ready
-            function checkAnimationsReady() {
-                if (animationTracker.allReady() && !animationsReady) {
-                    animationsReady = true;
-                    if (targetProgress < 100) {
-                        targetProgress = 100;
-                    }
-                }
-            }
 
-            // Check fonts
             function checkFonts() {
-                if (document.fonts && document.fonts.ready) {
+                if (document.fonts?.ready) {
                     document.fonts.ready.then(() => {
                         fontsLoaded = true;
                         checkMinimumWait();
                     }).catch(() => {
-                        // Fallback if fonts API fails
                         setTimeout(() => {
                             fontsLoaded = true;
                             checkMinimumWait();
                         }, 500);
                     });
                 } else {
-                    // Fallback for browsers without Font Loading API
                     setTimeout(() => {
                         fontsLoaded = true;
                         checkMinimumWait();
@@ -3260,7 +3055,6 @@
                 }
             }
 
-            // Check stylesheets
             function checkStylesheets() {
                 const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
                 if (stylesheets.length === 0) {
@@ -3268,34 +3062,32 @@
                     checkMinimumWait();
                 } else {
                     let loadedCount = 0;
+                    const checkComplete = () => {
+                        if (loadedCount >= stylesheets.length && !stylesheetsLoaded) {
+                            clearTimeout(timeoutId);
+                            stylesheetsLoaded = true;
+                            checkMinimumWait();
+                        }
+                    };
+                    const timeoutId = setTimeout(() => {
+                        if (!stylesheetsLoaded) {
+                            stylesheetsLoaded = true;
+                            checkMinimumWait();
+                        }
+                    }, 3000);
                     stylesheets.forEach(link => {
-                        if (link.sheet) {
+                        if (link.sheet || !link.href || link.href.startsWith('data:')) {
                             loadedCount++;
                         } else {
-                            link.addEventListener('load', () => {
-                                loadedCount++;
-                                if (loadedCount >= stylesheets.length) {
-                                    stylesheetsLoaded = true;
-                                    checkMinimumWait();
-                                }
-                            });
-                            link.addEventListener('error', () => {
-                                loadedCount++;
-                                if (loadedCount >= stylesheets.length) {
-                                    stylesheetsLoaded = true;
-                                    checkMinimumWait();
-                                }
-                            });
+                            const onLoad = () => { loadedCount++; checkComplete(); };
+                            link.addEventListener('load', onLoad);
+                            link.addEventListener('error', onLoad);
                         }
                     });
-                    if (loadedCount >= stylesheets.length) {
-                        stylesheetsLoaded = true;
-                        checkMinimumWait();
-                    }
+                    checkComplete();
                 }
             }
 
-            // Check scripts
             function checkScripts() {
                 const scripts = document.querySelectorAll('script[src]');
                 if (scripts.length === 0) {
@@ -3303,40 +3095,35 @@
                     checkMinimumWait();
                 } else {
                     let loadedCount = 0;
+                    const checkComplete = () => {
+                        if (loadedCount >= scripts.length && !scriptsLoaded) {
+                            clearTimeout(timeoutId);
+                            scriptsLoaded = true;
+                            checkMinimumWait();
+                        }
+                    };
+                    const timeoutId = setTimeout(() => {
+                        if (!scriptsLoaded) {
+                            scriptsLoaded = true;
+                            checkMinimumWait();
+                        }
+                    }, 3000);
                     scripts.forEach(script => {
-                        if (script.readyState === 'complete' || script.readyState === 'loaded') {
+                        if (script.readyState === 'complete' || script.readyState === 'loaded' || !script.src) {
                             loadedCount++;
                         } else {
-                            script.addEventListener('load', () => {
-                                loadedCount++;
-                                if (loadedCount >= scripts.length) {
-                                    scriptsLoaded = true;
-                                    checkMinimumWait();
-                                }
-                            });
-                            script.addEventListener('error', () => {
-                                loadedCount++;
-                                if (loadedCount >= scripts.length) {
-                                    scriptsLoaded = true;
-                                    checkMinimumWait();
-                                }
-                            });
+                            const onLoad = () => { loadedCount++; checkComplete(); };
+                            script.addEventListener('load', onLoad);
+                            script.addEventListener('error', onLoad);
                         }
                     });
-                    if (loadedCount >= scripts.length) {
-                        scriptsLoaded = true;
-                        checkMinimumWait();
-                    }
+                    checkComplete();
                 }
             }
 
-            // Poll for animation readiness and minimum wait
             const checkInterval = setInterval(() => {
-                checkAnimationsReady();
                 checkMinimumWait();
-                if (animationsReady && minimumWaitTime) {
-                    clearInterval(checkInterval);
-                }
+                if (minimumWaitTime) clearInterval(checkInterval);
             }, 100);
 
             // Check background resources (images)
@@ -3350,13 +3137,22 @@
                     imagesLoaded = true;
                     checkMinimumWait();
                 } else {
+                    let timeoutId = setTimeout(() => {
+                        if (!imagesLoaded) {
+                            imagesLoaded = true;
+                            checkMinimumWait();
+                        }
+                    }, 3000);
                     images.forEach(img => {
                         if (img.complete && img.naturalHeight !== 0) {
+                            loadedCount++;
+                        } else if (img.complete) {
                             loadedCount++;
                         } else {
                             img.addEventListener('load', () => {
                                 loadedCount++;
                                 if (loadedCount >= totalImages) {
+                                    clearTimeout(timeoutId);
                                     imagesLoaded = true;
                                     checkMinimumWait();
                                 }
@@ -3364,6 +3160,7 @@
                             img.addEventListener('error', () => {
                                 loadedCount++;
                                 if (loadedCount >= totalImages) {
+                                    clearTimeout(timeoutId);
                                     imagesLoaded = true;
                                     checkMinimumWait();
                                 }
@@ -3371,171 +3168,113 @@
                         }
                     });
                     if (loadedCount >= totalImages) {
+                        clearTimeout(timeoutId);
                         imagesLoaded = true;
                         checkMinimumWait();
                     }
                 }
-
-                // Also check canvas elements are ready
-                const canvases = document.querySelectorAll('canvas');
-                if (canvases.length > 0) {
-                    let canvasReady = 0;
-                    canvases.forEach(canvas => {
-                        if (canvas.width > 0 && canvas.height > 0) {
-                            canvasReady++;
-                        }
-                    });
-                    // Canvas readiness is tracked via animations
-                }
             }
 
-            // Track page load progress
             function trackPageLoad() {
-                // Initial progress (DOM loading)
+                const checkResources = () => {
+                    checkFonts();
+                    checkStylesheets();
+                    checkScripts();
+                    checkBackgroundResources();
+                };
                 if (document.readyState === 'loading') {
                     targetProgress = 10;
-                } else if (document.readyState === 'interactive') {
-                    targetProgress = 30;
-                    checkFonts();
-                    checkStylesheets();
-                    checkScripts();
-                    checkBackgroundResources();
-                } else if (document.readyState === 'complete') {
-                    targetProgress = 70;
-                    backgroundLoaded = true;
-                    checkFonts();
-                    checkStylesheets();
-                    checkScripts();
-                    checkBackgroundResources();
-                }
-
-                // Listen for DOMContentLoaded
-                if (document.readyState === 'loading') {
                     document.addEventListener('DOMContentLoaded', () => {
                         targetProgress = 30;
-                        checkFonts();
-                        checkStylesheets();
-                        checkScripts();
-                        checkBackgroundResources();
+                        checkResources();
                     });
-                }
-
-                // Listen for window load (all resources)
-                if (document.readyState !== 'complete') {
-                    window.addEventListener('load', () => {
-                        targetProgress = 85; // Leave 15% for animations and final checks
-                        allResourcesLoaded = true;
-                        checkFonts();
-                        checkStylesheets();
-                        checkScripts();
-                        checkBackgroundResources();
-                        checkAnimationsReady();
-                    });
+                } else if (document.readyState === 'interactive') {
+                    targetProgress = 30;
+                    checkResources();
                 } else {
-                    // Already complete
-                    targetProgress = 85; // Leave 15% for animations and final checks
-                    allResourcesLoaded = true;
-                    checkFonts();
-                    checkStylesheets();
-                    checkScripts();
-                    checkBackgroundResources();
-                    checkAnimationsReady();
+                    targetProgress = 70;
+                    checkResources();
                 }
-
-                // Final check - ensure everything is ready
+                const initResources = () => {
+                    targetProgress = 85;
+                    allResourcesLoaded = true;
+                    checkResources();
+                };
+                if (document.readyState !== 'complete') {
+                    window.addEventListener('load', initResources);
+                } else {
+                    initResources();
+                }
                 setTimeout(() => {
                     if (animationsReady && allResourcesLoaded && fontsLoaded &&
                         stylesheetsLoaded && scriptsLoaded && imagesLoaded && minimumWaitTime) {
                         targetProgress = 100;
                     }
                 }, MIN_LOAD_TIME);
+                setTimeout(() => {
+                    if (targetProgress < 100) {
+                        fontsLoaded = stylesheetsLoaded = scriptsLoaded = imagesLoaded = minimumWaitTime = allResourcesLoaded = true;
+                        targetProgress = 100;
+                    }
+                }, MIN_LOAD_TIME + 2000);
             }
 
-            // Start tracking
             trackPageLoad();
-
-            // Start progress animation
             requestAnimationFrame(updateProgressBar);
         }
 
-        // Hide loading overlay when page is fully loaded
         function hideLoadingOverlay() {
             const overlay = document.getElementById('loadingOverlay');
             if (overlay) {
                 setTimeout(() => {
                     overlay.classList.add('hidden');
+                    document.body.classList.remove('loading');
                     setTimeout(() => {
                         overlay.style.display = 'none';
+                        // Force check scroll-to-top button after loading
+                        if (typeof window.toggleScrollToTop === 'function') {
+                            setTimeout(window.toggleScrollToTop, 100);
+                        }
                     }, 800);
-                }, 300); // Small delay after reaching 100%
+                }, 300);
             }
         }
 
-        // ============================================
-        // DEVICE CAPABILITY DETECTION
-        // ============================================
         const deviceCapabilities = {
             isLowEnd: false,
             isMobile: false,
-            hardwareConcurrency: navigator.hardwareConcurrency || 4,
-            deviceMemory: navigator.deviceMemory || 4,
-            connection: navigator.connection || navigator.mozConnection || navigator.webkitConnection,
-            reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
             init: function () {
-                // Detect mobile
-                this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-                    (window.innerWidth <= 768);
-
-                // Detect low-end device
-                const cores = this.hardwareConcurrency;
-                const memory = this.deviceMemory;
-                const connectionSpeed = this.connection ? (this.connection.effectiveType || '4g') : '4g';
-
-                // Low-end if: < 4 cores, < 4GB RAM, slow connection, or mobile with limited resources
-                this.isLowEnd = cores < 4 ||
-                    memory < 4 ||
-                    connectionSpeed === 'slow-2g' ||
-                    connectionSpeed === '2g' ||
-                    (this.isMobile && (cores < 4 || memory < 4));
-
-                // Add class to body for CSS optimizations
-                if (this.isLowEnd) {
-                    document.body.classList.add('low-end-device');
-                }
-                if (this.isMobile) {
-                    document.body.classList.add('mobile-device');
-                }
-                if (this.reducedMotion) {
-                    document.body.classList.add('reduced-motion');
-                }
+                this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+                const cores = navigator.hardwareConcurrency || 4;
+                const memory = navigator.deviceMemory || 4;
+                const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+                const connectionSpeed = connection ? (connection.effectiveType || '4g') : '4g';
+                this.isLowEnd = cores < 4 || memory < 4 || connectionSpeed === 'slow-2g' || connectionSpeed === '2g' || (this.isMobile && (cores < 4 || memory < 4));
+                if (this.isLowEnd) document.body.classList.add('low-end-device');
+                if (this.isMobile) document.body.classList.add('mobile-device');
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.body.classList.add('reduced-motion');
             }
         };
         deviceCapabilities.init();
-
-        // Initialize loading screen immediately
         initLoadingScreen();
 
-        // ============================================
-        // PERFORMANCE OPTIMIZATIONS
-        // ============================================
+        // Helper functions to reduce redundancy
+        const getScrollY = () => window.pageYOffset || window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        const getJsonLdScripts = () => document.querySelectorAll('script[type="application/ld+json"]');
 
-        // Cache frequently accessed DOM elements
         const DOMCache = {
             nav: null,
-            typingElement: null,
             dynamicMessage: null,
             copyrightYear: null,
             techTags: null,
             init: function () {
                 this.nav = document.querySelector('nav');
-                this.typingElement = document.getElementById('typingText');
                 this.dynamicMessage = document.getElementById('dynamicMessage');
                 this.copyrightYear = document.getElementById('copyrightYear');
                 this.techTags = document.querySelectorAll('.tech-tag');
             }
         };
 
-        // Debounce utility function
         const debounce = (func, wait) => {
             let timeout;
             return (...args) => {
@@ -3544,7 +3283,6 @@
             };
         };
 
-        // RequestAnimationFrame throttle for scroll
         let scrollRafId = null;
         const rafThrottle = (func) => (...args) => {
             if (scrollRafId === null) {
@@ -3555,330 +3293,7 @@
             }
         };
 
-        // Initialize DOM cache
         DOMCache.init();
-
-        // Intersection Observer for lazy loading animations (performance optimization)
-        const createLazyObserver = (callback, threshold = 0.1) => {
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            callback();
-                            // Unobserve after first trigger to prevent re-initialization
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold, rootMargin: '100px' });
-                return observer;
-            }
-            return null;
-        };
-
-        // ============================================
-        // ANIMATION FUNCTIONS
-        // ============================================
-
-        // Create Python/AI themed floating particles - Resume accurate
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            if (!particlesContainer) return;
-
-            // Adaptive particle count based on device capabilities
-            const particleCount = deviceCapabilities.isLowEnd ? 20 :
-                deviceCapabilities.isMobile ? 30 : 40;
-            // Resume-accurate technologies only
-            const resumeTech = ['Python', 'SQL', 'PyTorch', 'Flask', 'FastAPI', 'Pandas', 'Numpy', 'OpenAI', 'LangChain', 'AWS', 'GCP', 'Docker', 'Git', 'AI', 'ML', 'NLP', 'CV'];
-            const pythonKeywords = ['def', 'class', 'import', 'async', 'lambda', 'return', 'yield', 'if', 'for', 'while', 'try', 'except'];
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-
-                // Mix of resume technologies and Python keywords
-                if (Math.random() > 0.5) {
-                    particle.textContent = resumeTech[Math.floor(Math.random() * resumeTech.length)];
-                    particle.style.fontSize = '12px';
-                } else {
-                    particle.textContent = pythonKeywords[Math.floor(Math.random() * pythonKeywords.length)];
-                    particle.style.fontSize = '9px';
-                    particle.style.fontWeight = 'bold';
-                }
-
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                particle.style.opacity = 0.6 + Math.random() * 0.4;
-                particlesContainer.appendChild(particle);
-            }
-            // Mark particles as ready
-            animationTracker.particles = true;
-        }
-
-        // Neural Network Canvas Animation - Real Neural Network Structure
-        function initNeuralNetwork() {
-            const canvas = document.getElementById('neuralCanvas');
-            if (!canvas) return;
-
-            const ctx = canvas.getContext('2d');
-            let animationId;
-            let canvasWidth = window.innerWidth;
-            let canvasHeight = window.innerHeight;
-
-            // Neural Network Structure: [input, hidden1, hidden2, output]
-            const layers = [
-                { nodes: 6, label: 'INPUT' },   // Input layer
-                { nodes: 8, label: 'HIDDEN 1' }, // Hidden layer 1
-                { nodes: 6, label: 'HIDDEN 2' }, // Hidden layer 2
-                { nodes: 4, label: 'OUTPUT' }   // Output layer
-            ];
-
-            const networkNodes = [];
-            const connections = [];
-            const dataPulses = [];
-            let pulseCounter = 0;
-
-            function resizeCanvas() {
-                canvasWidth = window.innerWidth;
-                canvasHeight = window.innerHeight;
-                canvas.width = canvasWidth;
-                canvas.height = canvasHeight;
-                initializeNetwork();
-            }
-
-            function initializeNetwork() {
-                networkNodes.length = 0;
-                connections.length = 0;
-                dataPulses.length = 0;
-
-                const layerSpacing = canvasWidth / (layers.length + 1);
-                const verticalPadding = canvasHeight * 0.15;
-                const availableHeight = canvasHeight - (verticalPadding * 2);
-
-                // Create nodes for each layer
-                layers.forEach((layer, layerIndex) => {
-                    const layerX = layerSpacing * (layerIndex + 1);
-                    const nodeSpacing = availableHeight / (layer.nodes + 1);
-
-                    for (let i = 0; i < layer.nodes; i++) {
-                        const nodeY = verticalPadding + nodeSpacing * (i + 1);
-                        const activation = Math.random();
-
-                        networkNodes.push({
-                            x: layerX,
-                            y: nodeY,
-                            layer: layerIndex,
-                            index: i,
-                            activation: activation,
-                            targetActivation: activation,
-                            pulsePhase: Math.random() * Math.PI * 2
-                        });
-                    }
-                });
-
-                // Create connections between layers
-                for (let layerIndex = 0; layerIndex < layers.length - 1; layerIndex++) {
-                    const currentLayerNodes = networkNodes.filter(n => n.layer === layerIndex);
-                    const nextLayerNodes = networkNodes.filter(n => n.layer === layerIndex + 1);
-
-                    currentLayerNodes.forEach(fromNode => {
-                        nextLayerNodes.forEach(toNode => {
-                            const weight = (Math.random() - 0.5) * 2;
-                            connections.push({
-                                from: fromNode,
-                                to: toNode,
-                                weight: weight,
-                                active: false,
-                                pulseProgress: 0
-                            });
-                        });
-                    });
-                }
-            }
-
-            // Adaptive frame rate based on device capabilities
-            let lastFrameTime = 0;
-            const targetFPS = deviceCapabilities.isLowEnd ? 30 : 60;
-            const frameInterval = 1000 / targetFPS;
-
-            function animate(currentTime) {
-                // Throttle frame rate for low-end devices
-                if (currentTime - lastFrameTime < frameInterval) {
-                    animationId = requestAnimationFrame(animate);
-                    return;
-                }
-                lastFrameTime = currentTime;
-
-                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-
-                // Update node activations with smooth transitions
-                networkNodes.forEach(node => {
-                    node.targetActivation = 0.5 + Math.sin(Date.now() * 0.001 + node.pulsePhase) * 0.3;
-                    node.activation += (node.targetActivation - node.activation) * 0.1;
-                });
-
-                // Draw connections with data flow
-                connections.forEach(conn => {
-                    const fromX = conn.from.x;
-                    const fromY = conn.from.y;
-                    const toX = conn.to.x;
-                    const toY = conn.to.y;
-
-                    // Connection line opacity based on weight and activation
-                    const lineOpacity = Math.abs(conn.weight) * 0.4 * (conn.from.activation * 0.5 + 0.5);
-                    const lineColor = conn.weight > 0 ? 'rgba(0, 243, 255, ' : 'rgba(176, 38, 255, ';
-
-                    ctx.beginPath();
-                    ctx.moveTo(fromX, fromY);
-                    ctx.lineTo(toX, toY);
-                    ctx.strokeStyle = lineColor + lineOpacity + ')';
-                    // Neural Network: Thinner, more elegant lines (vs backend's thicker lines)
-                    ctx.lineWidth = Math.abs(conn.weight) * 1.5 + 0.5;
-                    ctx.shadowBlur = 10;
-                    ctx.shadowColor = lineColor + '0.7)';
-                    ctx.stroke();
-
-                    // Data pulse animation
-                    if (pulseCounter % 60 === 0 && Math.random() > 0.7) {
-                        dataPulses.push({
-                            fromX: fromX,
-                            fromY: fromY,
-                            toX: toX,
-                            toY: toY,
-                            progress: 0,
-                            speed: 0.02 + Math.random() * 0.03
-                        });
-                    }
-
-                    ctx.shadowBlur = 0;
-                });
-
-                // Draw data pulses (signals traveling along connections) - Optimized reverse iteration
-                for (let i = dataPulses.length - 1; i >= 0; i--) {
-                    const pulse = dataPulses[i];
-                    pulse.progress += pulse.speed;
-                    if (pulse.progress >= 1) {
-                        dataPulses.splice(i, 1);
-                        continue;
-                    }
-
-                    const pulseX = pulse.fromX + (pulse.toX - pulse.fromX) * pulse.progress;
-                    const pulseY = pulse.fromY + (pulse.toY - pulse.fromY) * pulse.progress;
-
-                    // Draw pulsing signal - Neural Network: Cyan pulses
-                    ctx.beginPath();
-                    ctx.arc(pulseX, pulseY, 5, 0, Math.PI * 2);
-                    // Alternating cyan and purple pulses for neural network
-                    const pulseColor = Math.random() > 0.5 ? 'rgba(0, 243, 255, 1)' : 'rgba(176, 38, 255, 1)';
-                    ctx.fillStyle = pulseColor;
-                    ctx.shadowBlur = 18;
-                    ctx.shadowColor = pulseColor.replace('1)', '0.9)');
-                    ctx.fill();
-                    ctx.shadowBlur = 0;
-                }
-
-                // Draw nodes (neurons)
-                networkNodes.forEach(node => {
-                    const nodeSize = 6 + node.activation * 4;
-                    const glowSize = nodeSize + 8;
-
-                    // Outer glow - Neural Network: Cyan circular nodes (vs backend's square boxes)
-                    const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, glowSize);
-                    // Enhanced cyan glow for neural network
-                    gradient.addColorStop(0, `rgba(0, 243, 255, ${node.activation * 0.7})`);
-                    gradient.addColorStop(0.4, `rgba(0, 243, 255, ${node.activation * 0.4})`);
-                    gradient.addColorStop(0.8, `rgba(176, 38, 255, ${node.activation * 0.2})`);
-                    gradient.addColorStop(1, 'rgba(0, 243, 255, 0)');
-
-                    ctx.beginPath();
-                    ctx.arc(node.x, node.y, glowSize, 0, Math.PI * 2);
-                    ctx.fillStyle = gradient;
-                    ctx.fill();
-
-                    // Node body - Neural Network: Circular nodes with cyan/purple gradient
-                    ctx.beginPath();
-                    ctx.arc(node.x, node.y, nodeSize, 0, Math.PI * 2);
-                    const nodeGradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, nodeSize);
-                    nodeGradient.addColorStop(0, `rgba(0, 243, 255, ${0.8 + node.activation * 0.2})`);
-                    nodeGradient.addColorStop(1, `rgba(176, 38, 255, ${0.6 + node.activation * 0.2})`);
-                    ctx.fillStyle = nodeGradient;
-                    ctx.shadowBlur = 12;
-                    ctx.shadowColor = 'rgba(0, 243, 255, 0.9)';
-                    ctx.fill();
-
-                    // Center core - Bright cyan center
-                    ctx.beginPath();
-                    ctx.arc(node.x, node.y, nodeSize * 0.35, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(0, 243, 255, 1)';
-                    ctx.shadowBlur = 8;
-                    ctx.shadowColor = 'rgba(0, 243, 255, 1)';
-                    ctx.fill();
-                    ctx.shadowBlur = 0;
-                });
-
-                // Draw layer labels - Neural Network: Cyan labels
-                const layerSpacing = canvasWidth / (layers.length + 1);
-                layers.forEach((layer, index) => {
-                    const layerX = layerSpacing * (index + 1);
-                    ctx.fillStyle = 'rgba(0, 243, 255, 0.7)';
-                    ctx.font = 'bold 13px Orbitron';
-                    ctx.textAlign = 'center';
-                    ctx.shadowBlur = 4;
-                    ctx.shadowColor = 'rgba(0, 243, 255, 0.5)';
-                    ctx.fillText(layer.label, layerX, 30);
-                    ctx.shadowBlur = 0;
-                });
-
-                pulseCounter++;
-                animationId = requestAnimationFrame(animate);
-            }
-
-            // Initialize and start
-            resizeCanvas();
-            // Mark neural network as ready after first frame
-            setTimeout(() => {
-                animationTracker.neuralNetwork = true;
-            }, 100);
-            isAnimating = true;
-            animate(0);
-
-            // Handle window resize - Optimized with debounce
-            const resizeHandler = debounce(() => {
-                resizeCanvas();
-            }, 100);
-            window.addEventListener('resize', resizeHandler, { passive: true });
-
-            // Return cleanup function
-            return () => {
-                isAnimating = false;
-                if (animationId) {
-                    cancelAnimationFrame(animationId);
-                }
-                window.removeEventListener('resize', resizeHandler);
-            };
-        }
-
-        // Typing Animation - Using cached element
-        function typeWriter() {
-            if (!DOMCache.typingElement) return;
-
-            const text = "Lead AI/ML & Backend Engineer";
-            let i = 0;
-
-            function type() {
-                if (i < text.length) {
-                    DOMCache.typingElement.textContent = text.substring(0, i + 1);
-                    i++;
-                    setTimeout(type, 30);
-                }
-            }
-
-            setTimeout(type, 1500);
-            // Mark typeWriter as ready after completion
-            setTimeout(() => {
-                animationTracker.typeWriter = true;
-            }, (text.length * 30) + 2000); // Total typing time + delay
-        }
 
         // Mobile Navigation Toggle
         const navToggle = document.getElementById('navToggle');
@@ -3910,18 +3325,34 @@
                 const targetId = this.getAttribute('href');
                 const target = document.querySelector(targetId);
                 if (target && DOMCache.nav) {
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+                    const targetPosition = target.getBoundingClientRect().top + getScrollY() - navHeight - 20;
+                    // Cross-browser smooth scroll with fallback
+                    if ('scrollBehavior' in document.documentElement.style) {
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // Fallback for older browsers
+                        const startPosition = getScrollY();
+                        const distance = targetPosition - startPosition;
+                        const duration = 500;
+                        let start = null;
+                        function step(timestamp) {
+                            if (!start) start = timestamp;
+                            const progress = timestamp - start;
+                            const percentage = Math.min(progress / duration, 1);
+                            window.scrollTo(0, startPosition + distance * percentage);
+                            if (progress < duration) {
+                                window.requestAnimationFrame(step);
+                            }
+                        }
+                        window.requestAnimationFrame(step);
+                    }
                 }
             });
         });
 
-        // 3D Tilt Effect removed - no mouse movement following
-
-        // Interactive Tech Tags - Using cached elements
         DOMCache.techTags.forEach(tag => {
             tag.addEventListener('mouseenter', () => {
                 tag.style.boxShadow = '0 0 20px var(--neon-cyan)';
@@ -3931,10 +3362,9 @@
             });
         });
 
-        // Update nav background on scroll - Optimized with RAF throttling
         window.addEventListener('scroll', rafThrottle(() => {
             if (!DOMCache.nav) return;
-            const scrollY = window.pageYOffset || window.scrollY;
+            const scrollY = getScrollY();
             const scrollPercent = Math.min(scrollY / 500, 1);
             if (scrollY > 100) {
                 DOMCache.nav.style.background = `rgba(10, 10, 15, ${0.8 + scrollPercent * 0.15})`;
@@ -3945,334 +3375,65 @@
             }
         }), { passive: true });
 
-        // Mouse cursor effect (throttled for performance)
-        let lastCursorTime = 0;
-        const cursorThrottle = 50; // ms between cursor creation
-        document.addEventListener('mousemove', (e) => {
-            const now = Date.now();
-            if (now - lastCursorTime < cursorThrottle) return;
-            lastCursorTime = now;
+        const techSymbols = ['🐍', '🤖', '🧠', '⚡', '🔧', '💻', '🚀', '⚙️', '🔌', '📊'];
+        let lastSymbolTime = 0;
+        const symbolThrottle = 150;
 
-            const cursor = document.createElement('div');
-            cursor.style.position = 'fixed';
-            cursor.style.width = '4px';
-            cursor.style.height = '4px';
-            cursor.style.background = 'var(--neon-cyan)';
-            cursor.style.borderRadius = '50%';
-            cursor.style.pointerEvents = 'none';
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            cursor.style.zIndex = '9999';
-            cursor.style.boxShadow = '0 0 10px var(--neon-cyan)';
-            document.body.appendChild(cursor);
+        const emitSymbol = (x, y, isClick = false) => {
+            const now = Date.now();
+            if (now - lastSymbolTime < symbolThrottle && !isClick) return;
+            lastSymbolTime = now;
+
+            const symbol = document.createElement('div');
+            const randomSymbol = techSymbols[Math.floor(Math.random() * techSymbols.length)];
+            symbol.textContent = randomSymbol;
+            symbol.style.position = 'fixed';
+            symbol.style.left = x + 'px';
+            symbol.style.top = y + 'px';
+            symbol.style.fontSize = isClick ? '24px' : '18px';
+            symbol.style.pointerEvents = 'none';
+            symbol.style.zIndex = '9999';
+            symbol.style.userSelect = 'none';
+            symbol.style.opacity = '0.9';
+            symbol.style.transform = 'translate(-50%, -50%) scale(0)';
+            symbol.style.transition = 'all 0.6s ease-out';
+            symbol.style.textShadow = '0 0 10px var(--neon-cyan), 0 0 20px var(--neon-purple)';
+            symbol.style.filter = 'drop-shadow(0 0 8px var(--neon-cyan))';
+            document.body.appendChild(symbol);
+
+            requestAnimationFrame(() => {
+                symbol.style.transform = 'translate(-50%, -50%) scale(1)';
+                symbol.style.opacity = '1';
+            });
 
             setTimeout(() => {
-                cursor.style.opacity = '0';
-                cursor.style.transition = 'opacity 0.5s';
-                setTimeout(() => cursor.remove(), 500);
-            }, 100);
+                const randomX = (Math.random() - 0.5) * 100;
+                const randomY = -50 - Math.random() * 50;
+                symbol.style.transform = `translate(calc(-50% + ${randomX}px), calc(-50% + ${randomY}px)) scale(0.5)`;
+                symbol.style.opacity = '0';
+                setTimeout(() => symbol.remove(), 600);
+            }, 50);
+        };
+
+        document.addEventListener('mousemove', (e) => {
+            emitSymbol(e.clientX, e.clientY, false);
         });
 
-        // Python Code Rain Effect
-        let matrixRainIntervalId = null;
-        function initMatrixRain() {
-            const canvas = document.getElementById('matrixCanvas');
-            if (!canvas) return;
+        document.addEventListener('click', (e) => {
+            emitSymbol(e.clientX, e.clientY, true);
+        });
 
-            // Clear any existing interval to prevent duplicates and memory leaks
-            if (matrixRainIntervalId !== null) {
-                clearInterval(matrixRainIntervalId);
-                matrixRainIntervalId = null;
-            }
+        document.addEventListener('touchstart', (e) => {
+            const touch = e.touches[0];
+            if (touch) emitSymbol(touch.clientX, touch.clientY, true);
+        });
 
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        document.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0];
+            if (touch) emitSymbol(touch.clientX, touch.clientY, false);
+        });
 
-            // Python code snippets and keywords
-            const pythonCode = [
-                // Python keywords
-                'def', 'class', 'import', 'from', 'async', 'await', 'lambda', 'return', 'yield',
-                'if', 'elif', 'else', 'for', 'while', 'try', 'except', 'finally', 'with', 'as',
-                'True', 'False', 'None', 'and', 'or', 'not', 'in', 'is', 'pass', 'break', 'continue',
-                // Resume technologies - AI
-                'PyTorch', 'Scikit-learn', 'VertexAI', 'Transformers', 'Spacy', 'NLTK', 'OpenCV', 'OpenAI', 'LangChain', 'LangGraph', 'Pinecone',
-                // Resume technologies - Languages & Frameworks
-                'Python', 'SQL', 'FastAPI', 'Flask', 'Pandas', 'Numpy', 'SQLAlchemy',
-                // Resume technologies - Databases
-                'MySQL', 'PostgreSQL', 'SQLite',
-                // Resume technologies - DevOps & Cloud
-                'Git', 'Gitlab', 'Docker', 'AWS', 'GCP', 'Talend',
-                // General AI/ML terms from resume context
-                'AI', 'ML', 'NLP', 'CV', 'ETL'
-            ];
-
-            // Adaptive settings based on device capabilities
-            const fontSize = deviceCapabilities.isLowEnd ? 10 : 12;
-            const columnSpacingMultiplier = deviceCapabilities.isLowEnd ? 0.8 : 0.55; // More spacing on low-end
-            const columnSpacing = fontSize * columnSpacingMultiplier;
-            const columns = Math.floor(canvas.width / columnSpacing);
-            const drops = [];
-
-            // Reduce column count on low-end devices for better performance
-            const maxColumns = deviceCapabilities.isLowEnd ? Math.min(columns, 30) :
-                deviceCapabilities.isMobile ? Math.min(columns, 40) : columns;
-            const actualColumns = Math.min(columns, maxColumns);
-
-            for (let i = 0; i < actualColumns; i++) {
-                drops[i] = {
-                    y: Math.random() * -500,
-                    speed: deviceCapabilities.isLowEnd ? (0.3 + Math.random() * 0.8) : (0.5 + Math.random() * 1.5),
-                    opacity: 0.2 + Math.random() * 0.3
-                };
-            }
-
-            function draw() {
-                ctx.fillStyle = 'rgba(10, 10, 15, 0.08)';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                ctx.font = fontSize + 'px "Courier New", monospace';
-
-                // Skip every other column on low-end devices for better performance
-                const step = deviceCapabilities.isLowEnd ? 2 : 1;
-                for (let i = 0; i < drops.length; i += step) {
-                    const text = pythonCode[Math.floor(Math.random() * pythonCode.length)];
-                    const x = i * columnSpacing;
-                    const drop = drops[i];
-
-                    // Gradient effect - brighter at top
-                    const gradient = ctx.createLinearGradient(x, drop.y, x, drop.y + fontSize * 3);
-                    gradient.addColorStop(0, `rgba(0, 243, 255, ${drop.opacity})`);
-                    gradient.addColorStop(1, `rgba(0, 243, 255, ${drop.opacity * 0.3})`);
-
-                    ctx.fillStyle = gradient;
-                    ctx.fillText(text, x, drop.y);
-
-                    drop.y += drop.speed;
-
-                    if (drop.y > canvas.height + 50) {
-                        drop.y = Math.random() * -200;
-                        drop.speed = deviceCapabilities.isLowEnd ? (0.3 + Math.random() * 0.8) : (0.5 + Math.random() * 1.5);
-                        drop.opacity = 0.2 + Math.random() * 0.3;
-                    }
-                }
-            }
-
-            // Adaptive interval based on device capabilities
-            const drawInterval = deviceCapabilities.isLowEnd ? 50 : // ~20fps for low-end
-                deviceCapabilities.isMobile ? 40 : 33; // ~25fps for mobile, ~30fps for desktop
-            matrixRainIntervalId = setInterval(draw, drawInterval);
-            // Mark matrix rain as ready
-            animationTracker.matrixRain = true;
-
-            // Optimized resize handler with debounce
-            const handleMatrixResize = debounce(() => {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                const newColumnSpacing = fontSize * columnSpacingMultiplier;
-                const newColumns = Math.floor(canvas.width / newColumnSpacing);
-                const newMaxColumns = deviceCapabilities.isLowEnd ? Math.min(newColumns, 30) :
-                    deviceCapabilities.isMobile ? Math.min(newColumns, 40) : newColumns;
-                const actualNewColumns = Math.min(newColumns, newMaxColumns);
-
-                while (drops.length < actualNewColumns) {
-                    drops.push({
-                        y: Math.random() * -500,
-                        speed: deviceCapabilities.isLowEnd ? (0.3 + Math.random() * 0.8) : (0.5 + Math.random() * 1.5),
-                        opacity: 0.2 + Math.random() * 0.3
-                    });
-                }
-                drops.length = actualNewColumns;
-            }, 100);
-            window.addEventListener('resize', handleMatrixResize, { passive: true });
-        }
-
-        // Python/Backend/AI Symbols Floating
-        function createAISymbols() {
-            const container = document.getElementById('aiSymbols');
-            if (!container) return;
-
-            // Resume-accurate symbols only
-            const pythonSymbols = ['def', 'class', 'import', 'async', 'lambda', 'Python', 'SQL'];
-            const aiSymbols = ['AI', 'ML', 'NLP', 'CV', 'PyTorch', 'LangChain', 'OpenAI', 'VertexAI'];
-            const backendSymbols = ['FastAPI', 'Flask', 'SQLAlchemy', 'Pandas', 'Docker', 'AWS', 'GCP', 'Git'];
-            const allSymbols = [...pythonSymbols, ...aiSymbols, ...backendSymbols];
-
-            function createSymbol() {
-                const symbol = document.createElement('div');
-                symbol.className = 'ai-symbol';
-                const symbolText = allSymbols[Math.floor(Math.random() * allSymbols.length)];
-                symbol.textContent = symbolText;
-
-                // Different colors based on category
-                if (pythonSymbols.includes(symbolText)) {
-                    symbol.style.color = 'rgba(0, 243, 255, 0.4)';
-                } else if (aiSymbols.includes(symbolText)) {
-                    symbol.style.color = 'rgba(176, 38, 255, 0.4)';
-                } else {
-                    symbol.style.color = 'rgba(57, 255, 20, 0.4)';
-                }
-
-                symbol.style.left = Math.random() * 100 + '%';
-                symbol.style.animationDelay = Math.random() * 20 + 's';
-                symbol.style.animationDuration = (15 + Math.random() * 10) + 's';
-                symbol.style.fontSize = (12 + Math.random() * 4) + 'px';
-                container.appendChild(symbol);
-
-                setTimeout(() => {
-                    symbol.remove();
-                }, 25000);
-            }
-
-            // Adaptive symbol count based on device capabilities
-            const initialSymbolCount = deviceCapabilities.isLowEnd ? 6 :
-                deviceCapabilities.isMobile ? 8 : 12;
-            const symbolInterval = deviceCapabilities.isLowEnd ? 6000 :
-                deviceCapabilities.isMobile ? 5000 : 4000;
-
-            for (let i = 0; i < initialSymbolCount; i++) {
-                setTimeout(() => createSymbol(), i * 2000);
-            }
-
-            // Adaptive interval to reduce CPU usage on low-end devices
-            setInterval(createSymbol, symbolInterval);
-            // Mark AI symbols as ready
-            animationTracker.aiSymbols = true;
-        }
-
-        // Backend Architecture Visualization
-        function initBackendArchitecture() {
-            const canvas = document.getElementById('backendCanvas');
-            if (!canvas) return;
-
-            const ctx = canvas.getContext('2d');
-            let canvasWidth = window.innerWidth;
-            let canvasHeight = window.innerHeight;
-
-            canvas.width = canvasWidth;
-            canvas.height = canvasHeight;
-
-            // Backend components: API, DB, Cache, Queue, etc.
-            const components = [
-                { name: 'API', x: 0.2, y: 0.3, connections: ['DB', 'Cache'] },
-                { name: 'DB', x: 0.5, y: 0.5, connections: ['API', 'Queue'] },
-                { name: 'Cache', x: 0.8, y: 0.3, connections: ['API', 'Queue'] },
-                { name: 'Queue', x: 0.5, y: 0.7, connections: ['DB', 'Cache', 'Worker'] },
-                { name: 'Worker', x: 0.2, y: 0.7, connections: ['Queue'] }
-            ];
-
-            let pulsePhase = 0;
-            let lastFrameTime = 0;
-            const targetFPS = deviceCapabilities.isLowEnd ? 30 : 60;
-            const frameInterval = 1000 / targetFPS;
-
-            function draw(currentTime) {
-                // Throttle frame rate for low-end devices
-                if (currentTime - lastFrameTime < frameInterval) {
-                    requestAnimationFrame(draw);
-                    return;
-                }
-                lastFrameTime = currentTime;
-
-                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-                pulsePhase += 0.02;
-
-                // Draw connections
-                components.forEach(comp => {
-                    comp.connections.forEach(connName => {
-                        const target = components.find(c => c.name === connName);
-                        if (target) {
-                            const x1 = comp.x * canvasWidth;
-                            const y1 = comp.y * canvasHeight;
-                            const x2 = target.x * canvasWidth;
-                            const y2 = target.y * canvasHeight;
-
-                            ctx.beginPath();
-                            ctx.moveTo(x1, y1);
-                            ctx.lineTo(x2, y2);
-                            // Backend Architecture: Green/Emerald color scheme
-                            ctx.strokeStyle = `rgba(16, 185, 129, ${0.5 + Math.sin(pulsePhase) * 0.25})`;
-                            ctx.lineWidth = 2.5;
-                            ctx.shadowBlur = 6;
-                            ctx.shadowColor = 'rgba(16, 185, 129, 0.6)';
-                            ctx.stroke();
-                            ctx.shadowBlur = 0;
-
-                            // Data flow indicator
-                            const progress = (pulsePhase * 50) % 100;
-                            const px = x1 + (x2 - x1) * (progress / 100);
-                            const py = y1 + (y2 - y1) * (progress / 100);
-
-                            ctx.beginPath();
-                            ctx.arc(px, py, 5, 0, Math.PI * 2);
-                            ctx.fillStyle = 'rgba(16, 185, 129, 1)';
-                            ctx.shadowBlur = 8;
-                            ctx.shadowColor = 'rgba(16, 185, 129, 0.9)';
-                            ctx.fill();
-                            ctx.shadowBlur = 0;
-                        }
-                    });
-                });
-
-                // Draw components
-                components.forEach(comp => {
-                    const x = comp.x * canvasWidth;
-                    const y = comp.y * canvasHeight;
-                    const size = 25;
-                    const pulse = Math.sin(pulsePhase + comp.x * 10) * 0.1 + 1;
-
-                    // Component box with glow - Backend Architecture: Green/Emerald theme
-                    const glowGradient = ctx.createRadialGradient(x, y, 0, x, y, size * 1.5);
-                    glowGradient.addColorStop(0, `rgba(16, 185, 129, ${0.35 * pulse})`);
-                    glowGradient.addColorStop(0.5, `rgba(16, 185, 129, ${0.18 * pulse})`);
-                    glowGradient.addColorStop(1, 'rgba(16, 185, 129, 0)');
-
-                    ctx.fillStyle = glowGradient;
-                    ctx.fillRect(x - size, y - size, size * 2, size * 2);
-
-                    // Component box - Square shape for backend (vs circular for neural network)
-                    ctx.fillStyle = `rgba(16, 185, 129, ${0.35 * pulse})`;
-                    ctx.fillRect(x - size / 2, y - size / 2, size, size);
-                    ctx.strokeStyle = `rgba(16, 185, 129, ${0.85 * pulse})`;
-                    ctx.lineWidth = 3;
-                    ctx.shadowBlur = 10;
-                    ctx.shadowColor = 'rgba(16, 185, 129, 0.7)';
-                    ctx.strokeRect(x - size / 2, y - size / 2, size, size);
-                    ctx.shadowBlur = 0;
-
-                    // Component label - Green theme
-                    ctx.fillStyle = 'rgba(16, 185, 129, 1)';
-                    ctx.font = 'bold 12px "Courier New", monospace';
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
-                    ctx.shadowBlur = 4;
-                    ctx.shadowColor = 'rgba(16, 185, 129, 0.6)';
-                    ctx.fillText(comp.name, x, y + size / 2 + 12);
-                    ctx.shadowBlur = 0;
-                });
-
-                requestAnimationFrame(draw);
-            }
-
-            draw(0);
-            // Mark backend architecture as ready after first frame
-            setTimeout(() => {
-                animationTracker.backendArchitecture = true;
-            }, 100);
-
-            // Optimized resize handler with debounce
-            const handleBackendResize = debounce(() => {
-                canvasWidth = window.innerWidth;
-                canvasHeight = window.innerHeight;
-                canvas.width = canvasWidth;
-                canvas.height = canvasHeight;
-            }, 100);
-            window.addEventListener('resize', handleBackendResize, { passive: true });
-        }
-
-        // Scroll Progress Indicator - Simple and reliable implementation
         (function () {
-            'use strict';
 
             let scrollProgressBar = null;
 
@@ -4287,7 +3448,7 @@
                     document.documentElement.scrollHeight,
                     document.documentElement.offsetHeight
                 );
-                const scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                const scrollTop = getScrollY();
                 const scrollableHeight = documentHeight - windowHeight;
 
                 if (scrollableHeight <= 0) {
@@ -4335,10 +3496,9 @@
 
         // Get base URL dynamically
         function getBaseUrl() {
-            return window.location.origin || 'https://about.pratyushjanghel.com';
+            return window.location.origin || 'https://pratyushjanghel.com';
         }
 
-        // Update all URLs dynamically
         function updateUrls() {
             const baseUrl = getBaseUrl();
 
@@ -4348,29 +3508,25 @@
                 canonical.href = baseUrl;
             }
 
-            // Update Open Graph URLs
             const ogUrl = document.querySelector('meta[property="og:url"]');
             if (ogUrl) {
                 ogUrl.content = baseUrl;
             }
             const ogImage = document.querySelector('meta[property="og:image"]');
             if (ogImage) {
-                ogImage.content = `${baseUrl}/og-image.jpg`;
+                ogImage.content = `${baseUrl}/index.png`;
             }
 
-            // Update Twitter URLs
             const twitterUrl = document.querySelector('meta[property="twitter:url"]');
             if (twitterUrl) {
                 twitterUrl.content = baseUrl;
             }
             const twitterImage = document.querySelector('meta[property="twitter:image"]');
             if (twitterImage) {
-                twitterImage.content = `${baseUrl}/twitter-image.jpg`;
+                twitterImage.content = `${baseUrl}/index.png`;
             }
 
-            // Update JSON-LD URLs
-            const jsonLdScripts = document.querySelectorAll('script[type="application/ld+json"]');
-            jsonLdScripts.forEach(script => {
+            getJsonLdScripts().forEach(script => {
                 try {
                     const jsonData = JSON.parse(script.textContent);
                     let updated = false;
@@ -4381,7 +3537,6 @@
                         updated = true;
                     }
 
-                    // Update WebSite schema
                     if (jsonData['@type'] === 'WebSite' && jsonData.url) {
                         jsonData.url = baseUrl;
                         if (jsonData.potentialAction && jsonData.potentialAction.target) {
@@ -4390,11 +3545,10 @@
                         updated = true;
                     }
 
-                    // Update BreadcrumbList items
                     if (jsonData.breadcrumb && jsonData.breadcrumb.itemListElement) {
                         jsonData.breadcrumb.itemListElement.forEach(item => {
-                            if (item.item && item.item.startsWith('https://about.pratyushjanghel.com')) {
-                                item.item = item.item.replace('https://about.pratyushjanghel.com', baseUrl);
+                            if (item.item && item.item.startsWith('https://pratyushjanghel.com')) {
+                                item.item = item.item.replace('https://pratyushjanghel.com', baseUrl);
                                 updated = true;
                             }
                         });
@@ -4404,12 +3558,11 @@
                         script.textContent = JSON.stringify(jsonData, null, 2);
                     }
                 } catch (e) {
-                    console.warn('Could not update JSON-LD URLs:', e);
+                    if (window.DEBUG) console.warn('Could not update JSON-LD URLs:', e);
                 }
             });
         }
 
-        // Calculate years of experience dynamically
         function calculateExperience() {
             const startDate = new Date('2019-08-19'); // Start of career
             const now = new Date();
@@ -4428,7 +3581,6 @@
                 aboutExpElement.textContent = yearsPlus;
             }
 
-            // Update meta tags dynamically
             const experienceText = `${yearsPlus} years`;
             const metaDescription = document.querySelector('meta[name="description"]');
             const metaOGDescription = document.querySelector('meta[property="og:description"]');
@@ -4449,8 +3601,7 @@
             }
 
             // Update JSON-LD descriptions
-            const jsonLdScripts = document.querySelectorAll('script[type="application/ld+json"]');
-            jsonLdScripts.forEach(script => {
+            getJsonLdScripts().forEach(script => {
                 try {
                     const jsonData = JSON.parse(script.textContent);
                     let updated = false;
@@ -4477,7 +3628,7 @@
                         script.textContent = JSON.stringify(jsonData, null, 2);
                     }
                 } catch (e) {
-                    console.warn('Could not update JSON-LD experience:', e);
+                    if (window.DEBUG) console.warn('Could not update JSON-LD experience:', e);
                 }
             });
 
@@ -4491,7 +3642,7 @@
                         contentSummary.textContent = JSON.stringify(summaryData, null, 2);
                     }
                 } catch (e) {
-                    console.warn('Could not update content-summary experience:', e);
+                    if (window.DEBUG) console.warn('Could not update content-summary experience:', e);
                 }
             }
         }
@@ -4556,14 +3707,9 @@
             }, 500);
         }
 
-        // Initialize time-based updates
-        // Update URLs and experience on page load
         updateUrls();
         calculateExperience();
         calculateCompanyDuration();
-
-        // Update experience calculations every minute (for precision)
-        // Use requestIdleCallback for non-critical updates on high-end devices
         const scheduleExperienceUpdate = () => {
             if (deviceCapabilities.isLowEnd || !window.requestIdleCallback) {
                 setInterval(() => {
@@ -4576,111 +3722,33 @@
                     calculateCompanyDuration();
                     requestIdleCallback(updateExperience, { timeout: 60000 });
                 };
-                requestIdleCallback(updateExperience, { timeout: 60000 });
+                updateExperience();
             }
         };
         scheduleExperienceUpdate();
 
-        // Rotate messages every 2 seconds
         setInterval(rotateMessage, 2000);
 
-        // Update copyright year dynamically - Using cached element
         if (DOMCache.copyrightYear) {
             DOMCache.copyrightYear.textContent = new Date().getFullYear();
         }
 
-        // Initialize animations with performance optimization
-        // Particles are always visible, load immediately
-        createParticles();
 
-        // Use requestIdleCallback for non-critical animations on high-end devices
-        // For low-end devices, initialize immediately to ensure they're ready for loader
-        const initAnimations = () => {
-            const neuralCanvas = document.getElementById('neuralCanvas');
-            const matrixCanvas = document.getElementById('matrixCanvas');
-            const backendCanvas = document.getElementById('backendCanvas');
-            const aiSymbols = document.getElementById('aiSymbols');
-
-            // Initialize critical animations immediately
-            typeWriter();
-
-            // During loading screen, always initialize all immediately to ensure they're ready
-            // For high-end devices after loading, use lazy loading with IntersectionObserver
-            const loadingOverlay = document.getElementById('loadingOverlay');
-            if (deviceCapabilities.isLowEnd || (loadingOverlay && loadingOverlay.style.display !== 'none')) {
-                // Initialize all immediately for low-end or during loading
-                if (neuralCanvas) initNeuralNetwork();
-                if (matrixCanvas) initMatrixRain();
-                if (backendCanvas) initBackendArchitecture();
-                if (aiSymbols) createAISymbols();
-            } else {
-                // Lazy load with IntersectionObserver for high-end devices
-                const lazyObserver = createLazyObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const target = entry.target;
-                            if (target.id === 'neuralCanvas' && neuralCanvas) {
-                                initNeuralNetwork();
-                                lazyObserver.unobserve(target);
-                            } else if (target.id === 'matrixCanvas' && matrixCanvas) {
-                                initMatrixRain();
-                                lazyObserver.unobserve(target);
-                            } else if (target.id === 'backendCanvas' && backendCanvas) {
-                                initBackendArchitecture();
-                                lazyObserver.unobserve(target);
-                            } else if (target.id === 'aiSymbols' && aiSymbols) {
-                                createAISymbols();
-                                lazyObserver.unobserve(target);
-                            }
-                        }
-                    });
-                }, 0.1);
-
-                // Observe canvas elements for lazy loading
-                if (neuralCanvas) lazyObserver.observe(neuralCanvas);
-                if (matrixCanvas) lazyObserver.observe(matrixCanvas);
-                if (backendCanvas) lazyObserver.observe(backendCanvas);
-                if (aiSymbols) lazyObserver.observe(aiSymbols);
-            }
-        };
-
-        // Initialize animations based on device capabilities
-        if (deviceCapabilities.isLowEnd) {
-            // Low-end: Initialize immediately
-            initAnimations();
-        } else if (window.requestIdleCallback) {
-            // High-end: Use requestIdleCallback for better performance
-            requestIdleCallback(initAnimations, { timeout: 2000 });
-        } else {
-            // Fallback: Initialize after a short delay
-            setTimeout(initAnimations, 100);
-        }
-
-        // Testimonials Slider
         (function () {
-            'use strict';
-
             const testimonialCards = document.querySelectorAll('.testimonial-card');
             if (testimonialCards.length === 0) return;
 
-            let currentIndex = 0;
-            const slideDuration = 5000; // 5 seconds per slide
-            let slideInterval = null;
-            let isTransitioning = false;
+            let currentIndex = 0, slideInterval = null, isTransitioning = false;
+            const slideDuration = 3000;
 
             const prevBtn = document.getElementById('testimonialPrevBtn');
             const nextBtn = document.getElementById('testimonialNextBtn');
             const testimonialsGrid = document.getElementById('testimonialsGrid');
 
-            // Function to set all cards to the height of the tallest card
             function setEqualCardHeights() {
                 if (!testimonialsGrid || testimonialCards.length === 0) return;
-
-                // Store original classes and styles
                 const originalStates = [];
                 let maxHeight = 0;
-
-                // Temporarily make all cards visible and measure their heights
                 testimonialCards.forEach((card, index) => {
                     originalStates[index] = {
                         classes: card.className,
@@ -4691,7 +3759,6 @@
                         visibility: card.style.visibility
                     };
 
-                    // Make card visible for measurement (but keep it off-screen)
                     card.className = 'testimonial-card';
                     card.style.position = 'absolute';
                     card.style.opacity = '1';
@@ -4701,10 +3768,7 @@
                     card.style.height = 'auto';
                 });
 
-                // Force a reflow to ensure measurements are accurate
                 testimonialsGrid.offsetHeight;
-
-                // Measure all cards (using offsetHeight to include padding and borders)
                 testimonialCards.forEach(card => {
                     const height = card.offsetHeight || card.scrollHeight;
                     if (height > maxHeight) {
@@ -4712,10 +3776,6 @@
                     }
                 });
 
-                // Add buffer for quote symbols (now positioned at top: 10px, bottom: 10px, so no extra buffer needed)
-                const quoteBuffer = 0;
-
-                // Restore original states and set equal heights
                 testimonialCards.forEach((card, index) => {
                     const original = originalStates[index];
                     card.className = original.classes;
@@ -4727,9 +3787,8 @@
                     card.style.height = maxHeight + 'px';
                 });
 
-                // Set grid container height (with buffer for quote symbols)
                 if (maxHeight > 0) {
-                    testimonialsGrid.style.minHeight = (maxHeight + quoteBuffer) + 'px';
+                    testimonialsGrid.style.minHeight = maxHeight + 'px';
                 }
             }
 
@@ -4737,11 +3796,8 @@
                 if (isTransitioning) return;
                 isTransitioning = true;
 
-                // Ensure index is within bounds
                 if (index < 0) index = testimonialCards.length - 1;
                 if (index >= testimonialCards.length) index = 0;
-
-                // Remove all classes from all cards
                 testimonialCards.forEach((card, i) => {
                     card.classList.remove('active', 'prev', 'next');
 
@@ -4752,7 +3808,6 @@
                     }
                 });
 
-                // Add active class to current card
                 if (testimonialCards[index]) {
                     testimonialCards[index].classList.add('active');
                     currentIndex = index;
@@ -4780,7 +3835,6 @@
             }
 
             function updateButtons() {
-                // Buttons are always enabled for continuous loop
                 if (prevBtn) prevBtn.disabled = false;
                 if (nextBtn) nextBtn.disabled = false;
             }
@@ -4805,7 +3859,6 @@
             }
 
             function resumeSlider() {
-                // Resume from current slide without resetting
                 if (!slideInterval) {
                     slideInterval = setInterval(() => {
                         if (!isTransitioning) {
@@ -4820,7 +3873,6 @@
                 startSlider();
             }
 
-            // Button event listeners
             if (prevBtn) {
                 prevBtn.addEventListener('click', () => {
                     prevSlide();
@@ -4835,26 +3887,21 @@
                 });
             }
 
-            // Pause on hover - both container and individual cards
             const testimonialsContainer = document.querySelector('.testimonials-container');
             if (testimonialsContainer) {
                 testimonialsContainer.addEventListener('mouseenter', stopSlider);
                 testimonialsContainer.addEventListener('mouseleave', resumeSlider);
             }
 
-            // Pause on hover for individual testimonial cards
             testimonialCards.forEach(card => {
                 card.addEventListener('mouseenter', stopSlider);
                 card.addEventListener('mouseleave', resumeSlider);
             });
 
-            // Initialize slider
             function initSlider() {
-                // Set equal heights after a brief delay to ensure content is rendered
                 setTimeout(() => {
                     setEqualCardHeights();
                 }, 100);
-                // Recalculate on window resize (debounced)
                 let resizeTimeout;
                 window.addEventListener('resize', () => {
                     clearTimeout(resizeTimeout);
@@ -4870,59 +3917,99 @@
             }
         })();
 
-        // Scroll to Top Button
         (function () {
-            'use strict';
-
             const scrollToTopBtn = document.getElementById('scrollToTop');
             if (!scrollToTopBtn) {
-                console.warn('Scroll to top button not found');
+                if (window.DEBUG) console.warn('Scroll to top button not found');
                 return;
             }
 
             // Show/hide button based on scroll position
             function toggleScrollToTop() {
-                const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
-                if (scrollY > 300) {
-                    scrollToTopBtn.classList.add('visible');
-                } else {
-                    scrollToTopBtn.classList.remove('visible');
+                try {
+                    // Ensure body is not in loading state
+                    if (document.body.classList.contains('loading')) {
+                        scrollToTopBtn.classList.remove('visible');
+                        return;
+                    }
+                    const scrollY = typeof getScrollY === 'function' ? getScrollY() : (window.pageYOffset || window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0);
+                    if (scrollY > 200) {
+                        scrollToTopBtn.classList.add('visible');
+                    } else {
+                        scrollToTopBtn.classList.remove('visible');
+                    }
+                } catch (e) {
+                    if (window.DEBUG) console.error('Error in toggleScrollToTop:', e);
                 }
             }
 
-            // Scroll to top smoothly
+            // Make it globally accessible
+            window.toggleScrollToTop = toggleScrollToTop;
+
             function scrollToTop() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                if ('scrollBehavior' in document.documentElement.style) {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // Fallback for older browsers
+                    const startPosition = getScrollY();
+                    const duration = 500;
+                    let start = null;
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        const percentage = Math.min(progress / duration, 1);
+                        window.scrollTo(0, startPosition * (1 - percentage));
+                        if (progress < duration) {
+                            window.requestAnimationFrame(step);
+                        }
+                    }
+                    if (window.requestAnimationFrame) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        window.scrollTo(0, 0);
+                    }
+                }
             }
 
-            // Event listeners - using direct scroll listener for reliability
             scrollToTopBtn.addEventListener('click', scrollToTop);
 
-            // Use both rafThrottle if available, otherwise direct listener
-            if (typeof rafThrottle !== 'undefined') {
-                window.addEventListener('scroll', rafThrottle(toggleScrollToTop), { passive: true });
+            // Scroll handler with throttling
+            let scrollTicking = false;
+            const handleScroll = () => {
+                if (!scrollTicking) {
+                    window.requestAnimationFrame(() => {
+                        toggleScrollToTop();
+                        scrollTicking = false;
+                    });
+                    scrollTicking = true;
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+
+            // Initial checks - multiple attempts to ensure visibility
+            toggleScrollToTop();
+            setTimeout(toggleScrollToTop, 100);
+            setTimeout(toggleScrollToTop, 500);
+            setTimeout(toggleScrollToTop, 1000);
+
+            // Check on load events
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                toggleScrollToTop();
             } else {
-                // Fallback: direct listener with throttling
-                let ticking = false;
-                window.addEventListener('scroll', function () {
-                    if (!ticking) {
-                        window.requestAnimationFrame(function () {
-                            toggleScrollToTop();
-                            ticking = false;
-                        });
-                        ticking = true;
-                    }
-                }, { passive: true });
+                const onLoad = () => {
+                    setTimeout(toggleScrollToTop, 100);
+                    setTimeout(toggleScrollToTop, 500);
+                };
+                document.addEventListener('DOMContentLoaded', onLoad, { once: true });
+                window.addEventListener('load', onLoad, { once: true });
             }
 
-            // Initial check
-            toggleScrollToTop();
-
-            // Also check after a short delay to ensure it works
-            setTimeout(toggleScrollToTop, 100);
+            // Periodic check as fallback (every 2 seconds)
+            setInterval(toggleScrollToTop, 2000);
         })();
     </script>
 </body>
