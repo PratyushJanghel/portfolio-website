@@ -765,13 +765,21 @@
         #dynamicMessage {
             margin-top: 0;
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             color: var(--neon-purple);
+            font-weight: 500;
             font-style: italic;
             transition: opacity 0.5s ease;
             opacity: 1;
-            min-height: 2rem;
+            height: 3rem;
+            min-height: 3rem;
             line-height: 1.6;
+            text-shadow: var(--glow-purple), 0 0 20px rgba(138, 43, 226, 0.6);
+            word-spacing: -0.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .cta-buttons {
@@ -1147,7 +1155,7 @@
 
         .skill-card ul {
             list-style: none;
-            color: var(--text-secondary);
+            color: var(--text-primary);
         }
 
         .skill-card li {
@@ -1155,6 +1163,7 @@
             padding-left: 1.5rem;
             position: relative;
             transition: color 0.3s;
+            color: var(--text-primary);
         }
 
         .skill-card li::before {
@@ -2044,6 +2053,15 @@
                 max-width: 800px;
             }
 
+            #dynamicMessage {
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-shadow: var(--glow-purple), 0 0 18px rgba(138, 43, 226, 0.6);
+                word-spacing: -0.1em;
+                height: 2.8rem;
+                min-height: 2.8rem;
+            }
+
             section {
                 padding: 3.5rem 1.5rem;
             }
@@ -2080,6 +2098,15 @@
             .description {
                 font-size: 1rem;
                 line-height: 1.6;
+            }
+
+            #dynamicMessage {
+                font-size: 1.1rem;
+                font-weight: 500;
+                text-shadow: var(--glow-purple), 0 0 15px rgba(138, 43, 226, 0.5);
+                word-spacing: -0.1em;
+                height: 2.5rem;
+                min-height: 2.5rem;
             }
 
             .section-title {
@@ -2267,8 +2294,13 @@
             }
 
             #dynamicMessage {
-                font-size: 0.9rem;
+                font-size: 1rem;
+                font-weight: 500;
                 margin-bottom: 1.5rem;
+                text-shadow: var(--glow-purple), 0 0 12px rgba(138, 43, 226, 0.5);
+                word-spacing: -0.1em;
+                height: 2.2rem;
+                min-height: 2.2rem;
             }
 
             .section-title {
@@ -3098,6 +3130,24 @@
         // DYNAMIC LOADING SCREEN
         // ============================================
 
+        // Animation tracking system
+        const animationTracker = {
+            neuralNetwork: false,
+            matrixRain: false,
+            backendArchitecture: false,
+            aiSymbols: false,
+            typeWriter: false,
+            particles: false,
+            allReady: function () {
+                return this.neuralNetwork &&
+                    this.matrixRain &&
+                    this.backendArchitecture &&
+                    this.aiSymbols &&
+                    this.typeWriter &&
+                    this.particles;
+            }
+        };
+
         function initLoadingScreen() {
             const progressBar = document.getElementById('loadingProgressBar');
             if (!progressBar) return;
@@ -3106,6 +3156,14 @@
             let targetProgress = 0;
             let backgroundLoaded = false;
             let allResourcesLoaded = false;
+            let animationsReady = false;
+            let fontsLoaded = false;
+            let stylesheetsLoaded = false;
+            let scriptsLoaded = false;
+            let imagesLoaded = false;
+            let minimumWaitTime = false;
+            const startTime = Date.now();
+            const MIN_LOAD_TIME = 1500; // Minimum 1.5 seconds to ensure everything loads
 
             // Update progress bar smoothly
             function updateProgressBar() {
@@ -3114,61 +3172,195 @@
                     currentProgress = Math.min(currentProgress + increment, targetProgress);
                     progressBar.style.width = currentProgress + '%';
                     requestAnimationFrame(updateProgressBar);
-                } else if (allResourcesLoaded && currentProgress >= 100) {
-                    // Everything loaded, hide overlay
-                    hideLoadingOverlay();
+                } else if (allResourcesLoaded && animationsReady && fontsLoaded && stylesheetsLoaded &&
+                    scriptsLoaded && imagesLoaded && minimumWaitTime && currentProgress >= 100) {
+                    // Double check everything is truly ready
+                    const canvases = document.querySelectorAll('canvas');
+                    let allCanvasesReady = true;
+                    canvases.forEach(canvas => {
+                        if (canvas.width === 0 || canvas.height === 0) {
+                            allCanvasesReady = false;
+                        }
+                    });
+
+                    if (allCanvasesReady) {
+                        // Everything loaded including animations, hide overlay
+                        hideLoadingOverlay();
+                    } else {
+                        // Wait a bit more for canvases
+                        requestAnimationFrame(updateProgressBar);
+                    }
+                } else {
+                    requestAnimationFrame(updateProgressBar);
                 }
             }
 
-            // Check background resources (images, fonts, CSS)
-            function checkBackgroundResources() {
-                const images = document.querySelectorAll('img');
-                const backgrounds = document.querySelectorAll('[style*="background-image"], .hero');
-                let loadedCount = 0;
-                const totalResources = images.length + 1; // +1 for CSS/fonts
+            // Check minimum wait time
+            function checkMinimumWait() {
+                const elapsed = Date.now() - startTime;
+                if (elapsed >= MIN_LOAD_TIME && !minimumWaitTime) {
+                    minimumWaitTime = true;
+                }
+            }
 
-                // Check images
-                if (images.length === 0) {
-                    loadedCount = 1;
+            // Check if all animations are ready
+            function checkAnimationsReady() {
+                if (animationTracker.allReady() && !animationsReady) {
+                    animationsReady = true;
+                    if (targetProgress < 100) {
+                        targetProgress = 100;
+                    }
+                }
+            }
+
+            // Check fonts
+            function checkFonts() {
+                if (document.fonts && document.fonts.ready) {
+                    document.fonts.ready.then(() => {
+                        fontsLoaded = true;
+                        checkMinimumWait();
+                    }).catch(() => {
+                        // Fallback if fonts API fails
+                        setTimeout(() => {
+                            fontsLoaded = true;
+                            checkMinimumWait();
+                        }, 500);
+                    });
                 } else {
-                    images.forEach(img => {
-                        if (img.complete) {
+                    // Fallback for browsers without Font Loading API
+                    setTimeout(() => {
+                        fontsLoaded = true;
+                        checkMinimumWait();
+                    }, 1000);
+                }
+            }
+
+            // Check stylesheets
+            function checkStylesheets() {
+                const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+                if (stylesheets.length === 0) {
+                    stylesheetsLoaded = true;
+                    checkMinimumWait();
+                } else {
+                    let loadedCount = 0;
+                    stylesheets.forEach(link => {
+                        if (link.sheet) {
                             loadedCount++;
                         } else {
-                            img.addEventListener('load', () => {
+                            link.addEventListener('load', () => {
                                 loadedCount++;
-                                if (loadedCount >= totalResources && !backgroundLoaded) {
-                                    backgroundLoaded = true;
-                                    targetProgress = 90;
+                                if (loadedCount >= stylesheets.length) {
+                                    stylesheetsLoaded = true;
+                                    checkMinimumWait();
                                 }
                             });
-                            img.addEventListener('error', () => {
+                            link.addEventListener('error', () => {
                                 loadedCount++;
-                                if (loadedCount >= totalResources && !backgroundLoaded) {
-                                    backgroundLoaded = true;
-                                    targetProgress = 90;
+                                if (loadedCount >= stylesheets.length) {
+                                    stylesheetsLoaded = true;
+                                    checkMinimumWait();
                                 }
                             });
                         }
                     });
+                    if (loadedCount >= stylesheets.length) {
+                        stylesheetsLoaded = true;
+                        checkMinimumWait();
+                    }
                 }
+            }
 
-                // Check if document is ready (CSS, fonts loaded)
-                if (document.readyState === 'interactive' || document.readyState === 'complete') {
-                    if (!backgroundLoaded) {
-                        backgroundLoaded = true;
-                        targetProgress = 90;
+            // Check scripts
+            function checkScripts() {
+                const scripts = document.querySelectorAll('script[src]');
+                if (scripts.length === 0) {
+                    scriptsLoaded = true;
+                    checkMinimumWait();
+                } else {
+                    let loadedCount = 0;
+                    scripts.forEach(script => {
+                        if (script.readyState === 'complete' || script.readyState === 'loaded') {
+                            loadedCount++;
+                        } else {
+                            script.addEventListener('load', () => {
+                                loadedCount++;
+                                if (loadedCount >= scripts.length) {
+                                    scriptsLoaded = true;
+                                    checkMinimumWait();
+                                }
+                            });
+                            script.addEventListener('error', () => {
+                                loadedCount++;
+                                if (loadedCount >= scripts.length) {
+                                    scriptsLoaded = true;
+                                    checkMinimumWait();
+                                }
+                            });
+                        }
+                    });
+                    if (loadedCount >= scripts.length) {
+                        scriptsLoaded = true;
+                        checkMinimumWait();
+                    }
+                }
+            }
+
+            // Poll for animation readiness and minimum wait
+            const checkInterval = setInterval(() => {
+                checkAnimationsReady();
+                checkMinimumWait();
+                if (animationsReady && minimumWaitTime) {
+                    clearInterval(checkInterval);
+                }
+            }, 100);
+
+            // Check background resources (images)
+            function checkBackgroundResources() {
+                const images = document.querySelectorAll('img');
+                let loadedCount = 0;
+                const totalImages = images.length;
+
+                // Check images
+                if (totalImages === 0) {
+                    imagesLoaded = true;
+                    checkMinimumWait();
+                } else {
+                    images.forEach(img => {
+                        if (img.complete && img.naturalHeight !== 0) {
+                            loadedCount++;
+                        } else {
+                            img.addEventListener('load', () => {
+                                loadedCount++;
+                                if (loadedCount >= totalImages) {
+                                    imagesLoaded = true;
+                                    checkMinimumWait();
+                                }
+                            });
+                            img.addEventListener('error', () => {
+                                loadedCount++;
+                                if (loadedCount >= totalImages) {
+                                    imagesLoaded = true;
+                                    checkMinimumWait();
+                                }
+                            });
+                        }
+                    });
+                    if (loadedCount >= totalImages) {
+                        imagesLoaded = true;
+                        checkMinimumWait();
                     }
                 }
 
-                // Fallback: if no images, set to 90% after DOM is ready
-                if (images.length === 0 && document.readyState !== 'loading') {
-                    setTimeout(() => {
-                        if (!backgroundLoaded) {
-                            backgroundLoaded = true;
-                            targetProgress = 90;
+                // Also check canvas elements are ready
+                const canvases = document.querySelectorAll('canvas');
+                if (canvases.length > 0) {
+                    let canvasReady = 0;
+                    canvases.forEach(canvas => {
+                        if (canvas.width > 0 && canvas.height > 0) {
+                            canvasReady++;
                         }
-                    }, 100);
+                    });
+                    // Canvas readiness is tracked via animations
                 }
             }
 
@@ -3176,19 +3368,29 @@
             function trackPageLoad() {
                 // Initial progress (DOM loading)
                 if (document.readyState === 'loading') {
-                    targetProgress = 20;
+                    targetProgress = 10;
                 } else if (document.readyState === 'interactive') {
-                    targetProgress = 50;
+                    targetProgress = 30;
+                    checkFonts();
+                    checkStylesheets();
+                    checkScripts();
                     checkBackgroundResources();
                 } else if (document.readyState === 'complete') {
-                    targetProgress = 90;
+                    targetProgress = 70;
                     backgroundLoaded = true;
+                    checkFonts();
+                    checkStylesheets();
+                    checkScripts();
+                    checkBackgroundResources();
                 }
 
                 // Listen for DOMContentLoaded
                 if (document.readyState === 'loading') {
                     document.addEventListener('DOMContentLoaded', () => {
-                        targetProgress = 50;
+                        targetProgress = 30;
+                        checkFonts();
+                        checkStylesheets();
+                        checkScripts();
                         checkBackgroundResources();
                     });
                 }
@@ -3196,14 +3398,32 @@
                 // Listen for window load (all resources)
                 if (document.readyState !== 'complete') {
                     window.addEventListener('load', () => {
-                        targetProgress = 100;
+                        targetProgress = 85; // Leave 15% for animations and final checks
                         allResourcesLoaded = true;
+                        checkFonts();
+                        checkStylesheets();
+                        checkScripts();
+                        checkBackgroundResources();
+                        checkAnimationsReady();
                     });
                 } else {
                     // Already complete
-                    targetProgress = 100;
+                    targetProgress = 85; // Leave 15% for animations and final checks
                     allResourcesLoaded = true;
+                    checkFonts();
+                    checkStylesheets();
+                    checkScripts();
+                    checkBackgroundResources();
+                    checkAnimationsReady();
                 }
+
+                // Final check - ensure everything is ready
+                setTimeout(() => {
+                    if (animationsReady && allResourcesLoaded && fontsLoaded &&
+                        stylesheetsLoaded && scriptsLoaded && imagesLoaded && minimumWaitTime) {
+                        targetProgress = 100;
+                    }
+                }, MIN_LOAD_TIME);
             }
 
             // Start tracking
@@ -3324,6 +3544,8 @@
                 particle.style.opacity = 0.6 + Math.random() * 0.4;
                 particlesContainer.appendChild(particle);
             }
+            // Mark particles as ready
+            animationTracker.particles = true;
         }
 
         // Neural Network Canvas Animation - Real Neural Network Structure
@@ -3534,6 +3756,10 @@
 
             // Initialize and start
             resizeCanvas();
+            // Mark neural network as ready after first frame
+            setTimeout(() => {
+                animationTracker.neuralNetwork = true;
+            }, 100);
             isAnimating = true;
             animate();
 
@@ -3569,6 +3795,10 @@
             }
 
             setTimeout(type, 1500);
+            // Mark typeWriter as ready after completion
+            setTimeout(() => {
+                animationTracker.typeWriter = true;
+            }, (text.length * 30) + 2000); // Total typing time + delay
         }
 
         // Mobile Navigation Toggle
@@ -3699,7 +3929,8 @@
             ];
 
             const fontSize = 12;
-            const columns = Math.floor(canvas.width / fontSize);
+            const columnSpacing = fontSize * 0.55; // Reduced spacing for more columns
+            const columns = Math.floor(canvas.width / columnSpacing);
             const drops = [];
 
             for (let i = 0; i < columns; i++) {
@@ -3718,7 +3949,7 @@
 
                 for (let i = 0; i < drops.length; i++) {
                     const text = pythonCode[Math.floor(Math.random() * pythonCode.length)];
-                    const x = i * fontSize;
+                    const x = i * columnSpacing;
                     const drop = drops[i];
 
                     // Gradient effect - brighter at top
@@ -3741,12 +3972,15 @@
 
             // Slower interval for better performance (60fps -> ~30fps)
             matrixRainIntervalId = setInterval(draw, 33);
+            // Mark matrix rain as ready
+            animationTracker.matrixRain = true;
 
             // Optimized resize handler with debounce
             const handleMatrixResize = debounce(() => {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
-                const newColumns = Math.floor(canvas.width / fontSize);
+                const columnSpacing = fontSize * 0.55;
+                const newColumns = Math.floor(canvas.width / columnSpacing);
                 while (drops.length < newColumns) {
                     drops.push({
                         y: Math.random() * -500,
@@ -3803,6 +4037,8 @@
 
             // Slower interval to reduce CPU usage
             setInterval(createSymbol, 4000);
+            // Mark AI symbols as ready
+            animationTracker.aiSymbols = true;
         }
 
         // Backend Architecture Visualization
@@ -3910,6 +4146,10 @@
             }
 
             draw();
+            // Mark backend architecture as ready after first frame
+            setTimeout(() => {
+                animationTracker.backendArchitecture = true;
+            }, 100);
 
             // Optimized resize handler with debounce
             const handleBackendResize = debounce(() => {
@@ -4228,50 +4468,32 @@
         }
 
         // Initialize animations
-        // Initialize animations with lazy loading for performance
+        // Force initialize all animations immediately during loading screen
         createParticles(); // Particles are always visible, load immediately
 
-        // Lazy load canvas animations when they come into view
+        // Initialize all animations immediately (not lazy) so loading screen waits for them
         const neuralCanvas = document.getElementById('neuralCanvas');
         const matrixCanvas = document.getElementById('matrixCanvas');
         const backendCanvas = document.getElementById('backendCanvas');
         const aiSymbols = document.getElementById('aiSymbols');
 
+        // Force initialize all animations
         if (neuralCanvas) {
-            const neuralObserver = createLazyObserver(() => initNeuralNetwork());
-            if (neuralObserver) {
-                neuralObserver.observe(neuralCanvas);
-            } else {
-                initNeuralNetwork(); // Fallback for browsers without IntersectionObserver
-            }
+            initNeuralNetwork();
         }
 
         if (matrixCanvas) {
-            const matrixObserver = createLazyObserver(() => initMatrixRain());
-            if (matrixObserver) {
-                matrixObserver.observe(matrixCanvas);
-            } else {
-                initMatrixRain();
-            }
+            initMatrixRain();
         }
 
         if (backendCanvas) {
-            const backendObserver = createLazyObserver(() => initBackendArchitecture());
-            if (backendObserver) {
-                backendObserver.observe(backendCanvas);
-            } else {
-                initBackendArchitecture();
-            }
+            initBackendArchitecture();
         }
 
         if (aiSymbols) {
-            const symbolsObserver = createLazyObserver(() => createAISymbols());
-            if (symbolsObserver) {
-                symbolsObserver.observe(aiSymbols);
-            } else {
-                createAISymbols();
-            }
+            createAISymbols();
         }
+
         typeWriter();
 
         // Testimonials Slider
@@ -4422,6 +4644,17 @@
                 }
             }
 
+            function resumeSlider() {
+                // Resume from current slide without resetting
+                if (!slideInterval) {
+                    slideInterval = setInterval(() => {
+                        if (!isTransitioning) {
+                            nextSlide();
+                        }
+                    }, slideDuration);
+                }
+            }
+
             function restartSlider() {
                 stopSlider();
                 startSlider();
@@ -4442,12 +4675,18 @@
                 });
             }
 
-            // Pause on hover
+            // Pause on hover - both container and individual cards
             const testimonialsContainer = document.querySelector('.testimonials-container');
             if (testimonialsContainer) {
                 testimonialsContainer.addEventListener('mouseenter', stopSlider);
-                testimonialsContainer.addEventListener('mouseleave', restartSlider);
+                testimonialsContainer.addEventListener('mouseleave', resumeSlider);
             }
+
+            // Pause on hover for individual testimonial cards
+            testimonialCards.forEach(card => {
+                card.addEventListener('mouseenter', stopSlider);
+                card.addEventListener('mouseleave', resumeSlider);
+            });
 
             // Initialize slider
             function initSlider() {
