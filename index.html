@@ -1622,6 +1622,9 @@
             animation: floatCard 2s ease-in-out infinite;
             will-change: transform;
             transform: translateZ(0);
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
         }
 
         .contact-item:nth-child(odd) {
@@ -1680,14 +1683,13 @@
             letter-spacing: 1px;
         }
 
-        .contact-item a {
+        .contact-item span {
             color: var(--neon-cyan);
-            text-decoration: none;
             font-size: 1.1rem;
             transition: all 0.3s;
         }
 
-        .contact-item a:hover {
+        .contact-item:hover span {
             color: var(--neon-green);
             text-shadow: 0 0 10px var(--neon-green);
         }
@@ -2332,7 +2334,7 @@
                 font-size: 1rem;
             }
 
-            .contact-item a {
+            .contact-item span {
                 font-size: 1rem;
             }
 
@@ -2973,17 +2975,21 @@
                 extraordinary.
             </p>
             <div class="contact-info" itemscope itemtype="https://schema.org/ContactPoint">
-                <div class="contact-item">
+                <a href="mailto:contact@pratyushjanghel.com" class="contact-item" itemprop="email"
+                    aria-label="Send email to contact@pratyushjanghel.com">
                     <strong>Email</strong>
-                    <a href="mailto:contact@pratyushjanghel.com" itemprop="email"
-                        aria-label="Send email to contact@pratyushjanghel.com">contact@pratyushjanghel.com</a>
-                </div>
-                <div class="contact-item">
+                    <span>Send Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/pratyushjanghel" class="contact-item" target="_blank"
+                    rel="noopener noreferrer" itemprop="sameAs" aria-label="Connect with Pratyush Janghel on LinkedIn">
                     <strong>LinkedIn</strong>
-                    <a href="https://www.linkedin.com/in/pratyushjanghel" target="_blank" rel="noopener noreferrer"
-                        itemprop="sameAs"
-                        aria-label="Connect with Pratyush Janghel on LinkedIn">linkedin.com/in/pratyushjanghel</a>
-                </div>
+                    <span>View Profile</span>
+                </a>
+                <a href="PratyushJ-resume.pdf" class="contact-item" download="PratyushJ-resume.pdf"
+                    aria-label="Download Pratyush Janghel's resume PDF">
+                    <strong>Resume</strong>
+                    <span>Download PDF</span>
+                </a>
             </div>
         </div>
     </section>
